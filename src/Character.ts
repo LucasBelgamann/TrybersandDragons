@@ -1,10 +1,10 @@
 import Archetype, { Mage } from './Archetypes';
 import Energy from './Energy';
-import Fighter from './Fighter/index';
+import { SimpleFighter } from './Fighter/index';
 import Race, { Elf } from './Races';
 import getRandomInt from './utils';
 
-export default class Character implements Fighter {
+export default class Character implements SimpleFighter {
   private _race: Race;
   private _archetype: Archetype;
   private _maxLifePoints: number;
@@ -68,7 +68,7 @@ export default class Character implements Fighter {
     return this._lifePoints;
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this._strength);
   }
 
