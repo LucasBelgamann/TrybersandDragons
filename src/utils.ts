@@ -4,4 +4,6 @@ function getRandomInt(min: number, max: number) {
   return Math.floor(Math.random() * (newMax - newMin)) + newMin;
 }
 
+// bora bill
+
 export default getRandomInt;
